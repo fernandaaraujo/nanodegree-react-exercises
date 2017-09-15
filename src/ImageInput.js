@@ -87,7 +87,7 @@ class ImageInput extends React.Component {
     };
 
     if (value) {
-      style.backgroundImage = `url("${value}");
+      style.backgroundImage = `url("${value}")`;
       style.backgroundRepeat = 'no-repeat';
       style.backgroundPosition = 'center';
       style.backgroundSize = 'cover';
