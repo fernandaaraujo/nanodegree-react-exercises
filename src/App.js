@@ -29,7 +29,7 @@ class App extends Component {
   createContact(contact) {
     ContactsAPI.create(contact).then((newContact) => {
       this.setState(state => ({
-        contacts: state.contacts.concat([newContact])
+        contacts: state.contacts.concat(newContact)
       }));
     });
   }
@@ -39,8 +39,8 @@ class App extends Component {
       <div>
         <Route exact path="/" render={() => (
           <ListContacts
-            contacts={this.state.contacts}
             onDeleteContact={this.removeContact.bind(this)}
+            contacts={this.state.contacts}
           />
         )} />
         <Route path="/create" render={({ history }) => (
