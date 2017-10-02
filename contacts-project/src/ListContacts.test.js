@@ -27,9 +27,9 @@ describe('test list contact component', () => {
   });
 
   it('shoudl render a contact data', () => {
-    const contactData = listContact.find('.contact-list-item').at(0);
+    const contactData = listContact.find('.contact-list-item').first();
     expect(contactData.find('.contact-avatar').exists()).toBe(true);
-    expect(contactData.find('.contact-details p').at(0).text()).toBe("Ryan Florence");
-    expect(contactData.find('.contact-details p').at(1).text()).toBe("ryan@reacttraining.com");
+    expect(contactData.find('.contact-details p').at(0).text()).toBe("Michael Jackson");
+    expect(contactData.find('.contact-details p').at(1).text()).toBe("michael@reacttraining.com");
   });
 });
